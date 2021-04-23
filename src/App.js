@@ -1,7 +1,11 @@
+import Navbar from "./components/Navbar";
+import ProductGrid from "./components/ProductGrid";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+     <Navbar />
+     <ProductGrid />
     </div>
   );
 }
