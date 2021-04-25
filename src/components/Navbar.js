@@ -1,12 +1,12 @@
+import {Link} from 'react-router-dom';
+
 const Navbar = () => {
     return <header className="navbar">
-        <div className="logo">
-            Shopping App
-        </div>
+        <Link className="logo" to="/">Shopping App</Link>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><Link className="link" to="/">Home</Link></li>
+                <li><Link  className="link" to="/cart">Cart</Link></li>
             </ul>
         </nav>
     </header>

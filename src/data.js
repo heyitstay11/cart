@@ -1,0 +1,68 @@
+const data = [
+    {   id: 1,
+        name: 'HP 15 Entry Level',
+        description: '15.6 inch HD, 4GB, 1TB HDD',
+        price : 23990,
+        img: './imgs/hp.webp',
+        amount: 1,
+    },
+    {
+        id:2,
+        name: 'Dell Inspiron 3502',
+        description: '15.6 inch HD, 4GB, 256GB SSD',
+        price : 27390,
+        img: './imgs/dell.jpg',
+         amount: 1,
+
+    },
+    {
+        id:3,
+        name: 'Lenovo Idepad Slim 3',
+        description: '15.6 inch HD, 4GB, 256GB SSD',
+        price : 31990,
+        img: './imgs/idea.jpg',
+         amount: 1,
+    },
+    {
+        id:4,
+        name: 'Acer Aspire 3 ',
+        description: '15.6 inch HD, 4GB, 1TB HDD',
+        price : 29790,
+        img: './imgs/acer.jpg',
+         amount: 1,
+    },
+    {   id: 5,
+        name: 'HP 25 Entry Level',
+        description: '15.6 inch HD, 4GB, 1TB HDD',
+        price : 53990,
+        img: './imgs/hp.webp',
+         amount: 1,
+    },
+    {
+        id:6,
+        name: 'Dell Inspiron 5502',
+        description: '15.6 inch HD, 4GB, 256GB SSD',
+        price : 47390,
+        img: './imgs/dell.jpg',
+         amount: 1,
+    },
+    {
+        id:7,
+        name: 'Lenovo Idepad Slim 5',
+        description: '15.6 inch HD, 4GB, 256GB SSD',
+        price : 71990,
+        img: './imgs/idea.jpg',
+         amount: 1,
+    },
+    {
+        id:8,
+        name: 'Acer Aspire 5 ',
+        description: '15.6 inch HD, 4GB, 1TB HDD',
+        price : 89790,
+        img: './imgs/acer.jpg',
+        amount: 1,
+    },
+   
+]
+
+export default data;
