@@ -19,7 +19,7 @@ const Product = ({id, name, img, description, price, amount }) => {
             <p>{description}</p>
         </div>
         <div className="button-container">
-            <p>Price: ₹{price.toLocaleString()}</p>  
+            <p >Price: ₹&nbsp;{price.toLocaleString()}</p>  
             <button onClick={() => {
                 addItem(item);
                 setAlert(true);
