@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useGlobalContext } from "../context";
 
-const Product = ({id, name, img, description, price, amount }) => {
-    let item = {id, name, img, description, price, amount };
+const Product = ({id, name, imgLink, description, price, amount }) => {
+    let item = {id, name, imgLink, description, price, amount };
    const {addItem} = useGlobalContext();
    const [alert, setAlert] = useState(false);
    useEffect(() => {
@@ -12,7 +12,7 @@ const Product = ({id, name, img, description, price, amount }) => {
         return () => clearTimeout(timeout);
    }, [alert]);
     return  <article className="card">
-        <img src={process.env.PUBLIC_URL + img} alt={name} height="180" />
+        <img src={imgLink} alt={name} height="180" />
         <div className="item">
         <div className="info">
             <h3>{name}</h3>

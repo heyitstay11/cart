@@ -1,9 +1,9 @@
 import { useGlobalContext } from "../context";
 
-const CartItem = ({name, price, img, amount, id}) => {
+const CartItem = ({name, price, imgLink, amount, id}) => {
     const {remove, increase, decrease} = useGlobalContext();
  return <article className="cart-item">
-                <img src={process.env.PUBLIC_URL + img} alt="item" height="100" />
+                <img src={imgLink} alt="item" height="100" />
                 <div className="details">
                     <b>{name}</b>
                     <br/>
