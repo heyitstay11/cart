@@ -4,13 +4,16 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import {AppProvider} from './context';
+import { HomeProvider } from './homeContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
-      <BrowserRouter>
-        <App />    
-      </BrowserRouter>
+      <HomeProvider>
+        <BrowserRouter>
+          <App />    
+        </BrowserRouter>
+      </HomeProvider>
     </AppProvider>
   </React.StrictMode>,
   document.getElementById('root')

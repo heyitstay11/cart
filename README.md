@@ -1,4 +1,5 @@
 # React Shopping Cart using Context API, useReducer Hooks
+## Uses Tcart API created by me to fetch product data [check Tcart API](https://tcartapi.herokuapp.com/)
 
 ### Home
 ![Home](imgs/home_desk.png "Home Page")
