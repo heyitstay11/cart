@@ -1,18 +1,16 @@
-import React, { useContext, createContext, useEffect, useState } from 'react';
+import React, { useContext, createContext, useEffect, useState, useCallback } from 'react';
 
 const HomeContext = createContext();
-
-const TCART_API = 'https://tcartapi.herokuapp.com/api?limit=12';
 
 const HomeProvider = ({ children }) => {
 
     const [loading,setLoading] = useState(true);
     const [products, setProducts] = useState([]);
     
-    const fetchProducts = async (url) => {
+    const fetchProducts = useCallback(async () => {
         setLoading(true);
         try {
-            const res = await fetch(url);
+            const res = await fetch('https://tcartapi.herokuapp.com/api?limit=12');
             const data = await res.json();
             let newData = data.products.map((item) => {
                 item["amount"] = 1;
@@ -20,16 +18,15 @@ const HomeProvider = ({ children }) => {
             })
         setProducts(newData);         
             setLoading(false);
-            console.log(loading);
         } catch (error) {
             console.log(error);
             setLoading(false)   
         }
-    }
-
+    },[]) 
+    
     useEffect(() => {
-        fetchProducts(TCART_API);
-    }, []);
+        fetchProducts();
+    }, [fetchProducts]);
 
     return <HomeContext.Provider value={{
         loading,
