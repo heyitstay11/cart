@@ -6,7 +6,9 @@ const Product = ({id, name, imgLink, description, price, amount }) => {
    
     const {addItem} = useGlobalContext();
     const [alert, setAlert] = useState(false);
+    // const [readMore, setReadMore] = useState(0.5 - Math.random() >= 0 ? true : false); Randomize
     const [readMore, setReadMore] = useState(false);
+
 
    useEffect(() => {
         let timeout = setTimeout(() => {
@@ -19,7 +21,7 @@ const Product = ({id, name, imgLink, description, price, amount }) => {
         <div className="item">
         <div className="info">
             <h3>{name}</h3>
-            <p>{ readMore ? description : `${description.substring(0, 40)} ...`}
+            <p className="showP">{ readMore ? description : `${description.substring(0, 40)} ...`}
             &nbsp;
                 <button className='show' onClick={() => setReadMore(readMore => !readMore)}>
                     {readMore ? 'Show Less' : 'Show More'}
